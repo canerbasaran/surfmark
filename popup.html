@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Surfmark</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="js/papaparse.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+
+    <body style="background-color: #F6F6F6;">
+        <div id="container" class="container">
+            <div id="categories" class="mb-2">
+                <div id="btn-group" class="btn-group btn-block">
+                </div>
+            </div>
+
+
+            <div id="progress-sync-quota" class="progress position-relative mt-3" style="height: 17px;">
+            </div>
+
+            <div id="progress-list-sync-quota" class="progress position-relative mt-2" style="height: 17px;">
+                <!-- <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                <span class="justify-content-center align-middle d-flex position-absolute w-100 font-weight-bold">Sync storage: 60%</span> -->
+            </div>
+            
+
+            <div id="settings-btn" class="btn-group float-left mt-3 mb-4">
+                <button class="btn btn-sm btn-info float-right dropdown-toggle font-weight-bold" type="button" id="settings" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span><i class="fas fa-ellipsis-h"></i>&nbsp Settings</span> 
+                </button>
+
+                <ul id="settings-list" class="dropdown-menu" aria-labelledby="settings">
+                    <li><a class="dropdown-item font-weight-bold" style="font-size: .8rem"  id="download-as-csv" href="#"><span class="mr-1"><i class="fas fa-arrow-up"></i></span>&nbsp Export to CSV</a></li>
+                    <li><a class="dropdown-item font-weight-bold" style="font-size: .8rem"  id="import-list" href="#"><span class="mr-1"><i class="fas fa-arrow-down"></i></span>&nbsp Import a List</a></li>
+                    <input id="file-input" type="file" accept=".csv" style="display: none;" />
+                    <li><a class="dropdown-item font-weight-bold" style="font-size: .8rem"  id="sync-on" href="#"><span class="mr-1"><i class="fas fa-cloud text-primary"></i></span>&nbsp Turn on sync for this List</a></li>
+                    <li><a class="dropdown-item font-weight-bold" style="font-size: .8rem"  id="sync-off" href="#"><span class="mr-1"><i class="fas fa-cloud text-danger"></i></span>&nbsp Turn off sync for this List</a></li>
+                    
+                    <!-- <li><a class="dropdown-item font-weight-bold" style="font-size: .8rem"  id="confirm-delete-btn" href="#">Click here to delete this list</a></li> -->
+                </ul>
+            </div>
+
+
+            <div id="delete-list" class="btn-group float-right mt-3 mb-4">
+                <button class="btn btn-sm btn-danger float-right dropdown-toggle font-weight-bold" type="button" id="dropDownDelete" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span><i class="fas fa-times"></i>&nbsp Delete</span> 
+                </button>
+
+                <ul id="confirm-delete" class="dropdown-menu" aria-labelledby="dropDownDelete">
+                    <li><a class="dropdown-item font-weight-bold" style="font-size: .8rem"  id="confirm-delete-btn" href="#"><i class="fas fa-times"></i>&nbsp Click here to delete this list</a></li>
+                </ul>
+            </div>
+
+            <div id="card-list"></div>
+            <br>
+            <div id="myModal" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title ml-1" style="font-weight: bold;" id="myModalLabel">New List</h5>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" maxlength="26" class="form-control" id="list-name" placeholder="List name">
+                        </div>
+                        <div class="modal-footer">
+                            <button id="close-modal" type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button id="create-list-btn" type="button" class="btn btn-sm btn-info">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    /* overflow-y: scroll; */
+    /* min-height:600px; */
+    width:400px;
+    height: 580px;
+	margin: 10px;
+	padding: 10px;
+    /* padding-right: 0 !important; */
+    overflow-x: hidden; 
+}
+
+.delete {
+    position:absolute; 
+    top:-12px; 
+    right:-4px;
+    display: none;
+    cursor: pointer;
+    color: #646464
+}
+
+.cardLink {
+    cursor: pointer;
+}
+.card:hover .delete {
+    display:block;
+}
+
+.dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius:10px;
+}
+
+.progress {
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background-color: #86d3ff;
+}
+
+#dropdownMenuButton1, #list-name, #premiumEmail, #emailInput {
+    border-radius: 15px;
+}
+
+.btn{
+    border-radius: 10px;
+}
+
+#addCat {
+    font-weight: bold;
+}
+
+#login {
+    margin-top: -0.4rem;
+    margin-right: -0.6rem;
+    background-color: transparent;
+}
+
+.card {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.modal {
+    padding-right: 0px !important;
+}
+
+.modal-content  {
+    border-radius: 15px ; 
+}
+
+.modal-header, .modal-footer{
+    border-bottom: 0;
+    border-top: 0;
+}
+
+.modal-body {
+    margin-top:-1rem;
+    margin-bottom: -1rem;
+}
